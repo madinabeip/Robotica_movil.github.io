@@ -72,34 +72,35 @@
       </div>-->
 
       <div class="top-shelf top-shelf-grey">
-        <font color="black">
         <div class="content-container">
           <h1>Intentos</h1>
           <h2> En este proyecto se intentaron implementar varios algoritmos que resolvieran el problema de la aspiradora:  <h2>
           <ul class='bullet-list-round'>
-            <li> El primer intento fué un bump and go que siguiera paredes pero al entrar en una sala tendía a estar atascado además de que era incapaz de limpiar ciertas áreas</li>
+            <li> El primer intento fué un bump and go que siguiera paredes pero al entrar en una sala tendía a atascarse además de que era incapaz de limpiar ciertas áreas</li>
             
             <li> El segundo intento fué el bump and go giratorio, cada vez que la aspiradora se chocaba la velocidad de giro decrecía poco a poco. El problema de este algoritmo era que el robot tendía a no salir del mismo área </li>
             
-            <li> El tercer intento trató de que cada vez que chocara a un lado, girara al contrario y que cada vez que se diera de frente, fuera havcia atrás. El problema de esto fué que hacia atrás no se miraba si detrás había un obstáculo o no </li>
+            <li> El tercer intento trató de que cada vez que chocara a un lado, girara al contrario y que cada vez que se diera de frente, fuera hacia atrás. El problema de esto fué que al retroceder no se miraba si detrás había un obstáculo o no </li>
             
             <li> El último intento y el más efectivo fué implementar un giro aleatorio cada vez que la aspiradora se chocara </li>
           </ul>
             
+            <font color="black">
             <h1> Algoritmo definitivo: </h1>
           Tendremos 2 estados, el estado backward se eliminó por las razones expuestas enteriormente. El primer estado será avanzar a velocidad constante. 
-            El segundo estado es girar, generamos el giro aleatorio y su velocidad también aleatoria. Mientras la distancia detectada por el lidar no pase de un umbral, girará en la misma dirección.
+            El segundo estado es girar, la velocidad y el sentido de giro serán aleatorios. Mientras la distancia detectada por el lidar no pase de un umbral, girará en la misma dirección.
             
             Por último el cambio de estados se realiza cuando el lidar detecta que el robot próximo a una pared.
            
             <h1> Resultado final </h1>
-            Podemos apreciar que la tendencia del robot es dde girar aproximadamente 90º. Al ser un giro aleatorio y no llegar a los 90, aunque a veces se quede atascada, da una limpieza óptima.
-            El problema de esto es que habrá áreas las cuales tardará en limpiar. En este caso no fué necesario implementar estampas de tiempo. También se hubiera podido añadir un giro aleatorio teniendo en cuenta el tiempo, pero ya que hace la misma función que la velocidad o el sentido de giro, se decidió así por simplificación del código.
+            Podemos apreciar que la tendencia del robot es de girar aproximadamente 90º. Al ser un giro aleatorio y no llegar a los 90º, aunque a veces tarde en salir de ciertas zonas, da una limpieza óptima.
+            El problema de esto es que habrá áreas las cuales tardará en limpiar. También se hubiera podido añadir un giro aleatorio teniendo en cuenta el tiempo, pero ya que hace la misma función que la velocidad o el sentido de giro, se decidió no implementarlo por simplificación del código.
             
             <br>
-            <div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://jumpshare.com/embed/27kvNWFJ9ms9Blpb6IIH" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
             
-            </font> 
+            <div style="position: relative; padding-bottom: 56.25%; height: 2;"><iframe src="https://jumpshare.com/embed/27kvNWFJ9ms9Blpb6IIH" frameborder="2" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+            
+           </font> 
         </div>
       </div>
 
