@@ -72,12 +72,12 @@
       </div>-->
 
       <div class="top-shelf top-shelf-grey">
-        <font color="green">
+        <font color="black">
         <div class="content-container">
           <h1>Intentos</h1>
-          <h2> En este proyecto se intentaron implementar varios alforitms que resolvieran el problema de la aspiradora:  <h2>
+          <h2> En este proyecto se intentaron implementar varios algoritmos que resolvieran el problema de la aspiradora:  <h2>
           <ul class='bullet-list-round'>
-            <li> El primer intento fué un bum and go que siguiera paredes pero al entrar en una sala tendía a estar atascado además de que era incapaz de limpiar ciertas áreas</li>
+            <li> El primer intento fué un bump and go que siguiera paredes pero al entrar en una sala tendía a estar atascado además de que era incapaz de limpiar ciertas áreas</li>
             
             <li> El segundo intento fué el bump and go giratorio, cada vez que la aspiradora se chocaba la velocidad de giro decrecía poco a poco. El problema de este algoritmo era que el robot tendía a no salir del mismo área </li>
             
@@ -85,7 +85,12 @@
             
             <li> El último intento y el más efectivo fué implementar un giro aleatorio cada vez que la aspiradora se chocara </li>
           </ul>
-          
+            
+            <h1> Algoritmo definitivo: </h1>
+          Tendremos 2 estados, el estado backward se eliminó por las razones expuestas enteriormente. El primer estado será avanzar a velocidad constante. 
+            El segundo estado es girar, generamos el giro aleatorio y su velocidad también aleatoria. Mientras la distancia detectada por el lidar no pase de un umbral, girará en la misma dirección.
+            
+            Por último el cambio de estados se realiza cuando el lidar detecta que el robot próximo a una pared.
            </font> 
         </div>
       </div>
